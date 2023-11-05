@@ -1,0 +1,13 @@
+.element__image{
+    margin: 0;
+    padding: 0;
+    width: 282px;
+    min-height: 282px;
+    aspect-ratio: 1;
+    background-size: cover;
+}
+
+.element__image:hover {
+    opacity: .6;
+    cursor: pointer;
+}

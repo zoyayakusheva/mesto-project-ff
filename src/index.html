@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mesto</title>
+</head>
+<body class="page">
+    <header class="header">
+      <img src="<%=require('./images/header-logo.svg')%>" alt="Логотип Место" class="header__logo">
+    </header>
+    <main>
+      <section class="profile">
+        <img src="<%=require('./images/avatar.jpg')%>" alt="Аватар профиля" class="profile__avatar">
+        <div class="profile__info">
+          <div class="profile__group">
+            <h1 class="profile__name">Жак-Ив Кусто</h1>
+            <button class="profile__edit-button" type="button"></button>
+          </div>
+          <p class="profile__workplace">Исследователь океана</p>
+        </div>
+        <button class="profile__add-button" type="button"></button>
+      </section>
+      <section class="elements">
+        <ul class="elements__list"></ul>
+      </section>
+    </main>
+    <footer class="footer">
+      <p class="footer__text">&copy; 2023 Mesto Russia</p>
+    </footer>
+  <div class="popup popup_type_edit">
+    <div class="popup__container">
+      <button class="popup__close" id="close-button-profile" type="button"></button>
+      <h2 class="popup__title">Редактировать профиль</h2>
+      <form class="popup__form popup__form_type_edit" id="popup-form-edit" name="form-popup">
+        <fieldset class="popup__field">
+          <input class="popup__input popup__input_type_name" id="nameInput" type="text" name="name" placeholder="Имя" minlength="2" maxlength="40" required>
+          <span class="popup__input-error nameInput-error"></span>
+          <input class="popup__input popup__input_type_job" id="jobInput" type="text" name="job" placeholder="О себе" minlength="2" maxlength="200" required>
+          <span class="popup__input-error jobInput-error"></span>
+        </fieldset>
+        <button class="popup__submit-button" type="submit" title="Сохранить">Сохранить</button>
+      </form>
+    </div>
+  </div>
+  <div class="popup popup_add_card">
+    <div class="popup__container">
+      <button class="popup__close" id="close-button-card" type="button"></button>
+      <h2 class="popup__title">Новое место</h2>
+      <form class="popup__form popup__form_type_card" id="popup-form-add" name="CardForm-popup">
+       <fieldset class="popup__field">
+         <input class="popup__input popup__input_card_name" id="nameCard" type="text" name="name" placeholder="Название" minlength="2" maxlength="30" required>
+         <span class="popup__input-error nameCard-error"></span>
+         <input class="popup__input popup__input_card_link" id="linkCard" type="url" name="link" placeholder="Ссылка на картинку" required>
+         <span class="popup__input-error linkCard-error"></span>
+       </fieldset>
+       <button class="popup__submit-button popup__submit-button_card" id="add-button" type="submit" title="Создать">Создать</button>
+       </form>
+    </div>
+  </div>
+  <div class="popup popup_type_image">
+    <div class="popup__image-content">
+      <img src="#" alt="Открытое фото места" class="popup__image-photo">
+      <button class="popup__close" id="close-button-image" type="button"></button>
+      <h2 class="popup__image-title"></h2>
+    </div>
+  </div>
+  <template class="elements_template">
+    <li class="element">
+      <img src="#" alt="Фото места" class="element__image">
+      <button class="element__delete" type="button"></button>
+      <div class="element__group">
+        <h2 class="element__text"></h2>
+        <button class="element__like" type="submit"></button>
+      </div>
+    </li>
+  </template>
+</body>
+</html>

@@ -1,0 +1,33 @@
+.popup__input-error_active {
+    margin: 5px auto 0 auto;
+    padding: 0;
+    color: #FF0000;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: normal;
+    width: 358px;
+    position: absolute;
+    right: 36px;
+}
+
+.popup__input-error_active:first-of-type {
+    top: 143px;
+}
+
+.popup__input-error_active:last-of-type {
+    top: 200px;
+}
+
+@media all and (max-width: 767px){
+    .popup__input-error_active{
+        max-width: 238px;
+        right: 22px;
+    }
+    .popup__input-error_active:first-of-type {
+        top: 148px;
+    }
+    
+    .popup__input-error_active:last-of-type {
+        top: 207px;
+    }
+}

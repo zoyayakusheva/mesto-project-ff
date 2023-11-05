@@ -1,0 +1,23 @@
+.profile__workplace{
+    text-decoration: none;
+    margin: 16px 0 0 0;
+    padding: 0;
+    max-width: 336px;
+    color: #FFFFFF;
+    line-height: normal;
+    font-weight: 400;
+    font-size: 18px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+@media all and (max-width: 767px){
+    .profile__workplace{
+        max-width: 282px;
+        font-size: 14px;
+        line-height: 14px;
+        margin: 14px 0 0 0;
+        text-align: center;
+    }
+}
