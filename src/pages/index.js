@@ -75,35 +75,4 @@ formAddCard.addEventListener("submit", handleFormAddSubmit);
 
 allPopups.forEach((popup) => { 
     popup.addEventListener("mousedown", handleOverlayClose); 
-}); 
-
-buttonOpenPopupProfile.addEventListener("click", function () { 
-  openModal(popupProfile); 
-  nameInput.value = profileName.textContent;  
-  jobInput.value = profileDescription.textContent; 
-}); 
-buttonClosePopupProfile.addEventListener("click", function () { 
-  closeModal(popupProfile); 
-}); 
-elementFormEdit.addEventListener("submit", handleFormEditSubmit);
-
-buttonOpenPopupCard.addEventListener("click", function () { 
-  openModal(popupCard); 
-}); 
-buttonClosePopupCard.addEventListener("click", function () { 
-  closeModal(popupCard); 
 });
- 
-initialCards.forEach((item) => { 
-  const card = createCard(item.link, item.name); 
-  cardContainer.appendChild(card); 
-}); 
-
-buttonClosePopupImage.addEventListener("click", function () { 
-  closeModal(popupDescription); 
-}); 
-elementFormAdd.addEventListener("submit", handleFormAddSubmit); 
- 
-allPopups.forEach((popup) => { 
-  popup.addEventListener("mousedown", handleOverlayClose); 
-}); 
