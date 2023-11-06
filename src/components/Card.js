@@ -1,9 +1,3 @@
-import { handleEscClose } from "./modal.js";
-
-const popupDescription = document.querySelector(".popup_type_image");
-const popupImage = popupDescription.querySelector(".popup__image-photo");
-const popupCaption = popupDescription.querySelector(".popup__image-title");
-
 function getCardTemplate() {
   const cardTemplate = document.querySelector(".elements_template");
   return cardTemplate.content.cloneNode(true).querySelector(".element");
@@ -14,14 +8,6 @@ export function deleteCard(evt) {
 }  
 export function likeCard(evt) {  
   evt.target.classList.toggle("element__like_active");
-}  
-export function openPopupImage(link, name) {
-  popupImage.src = link;
-  popupImage.alt = name;
-  popupCaption.textContent = name;
-
-  popupDescription.classList.add("popup_opened"); 
-  document.addEventListener("keydown", handleEscClose); 
 }
 
 export function createCard(link, name, deleteCard, likeCard, openPopupImage) { 

@@ -15,11 +15,11 @@
         <div class="profile__info">
           <div class="profile__group">
             <h1 class="profile__name">Жак-Ив Кусто</h1>
-            <button class="profile__edit-button" type="button"></button>
+            <button class="profile__edit-button" type="button" aria-label="Редактировать профиль"></button>
           </div>
           <p class="profile__workplace">Исследователь океана</p>
         </div>
-        <button class="profile__add-button" type="button"></button>
+        <button class="profile__add-button" type="button" aria-label="Добавить новую карточку с фотографией"></button>
       </section>
       <section class="elements">
         <ul class="elements__list"></ul>
@@ -30,7 +30,7 @@
     </footer>
   <div class="popup popup_type_edit">
     <div class="popup__container">
-      <button class="popup__close" id="close-button-profile" type="button"></button>
+      <button class="popup__close" id="close-button-profile" type="button" aria-label="Закрыть окно редактирования профиля"></button>
       <h2 class="popup__title">Редактировать профиль</h2>
       <form class="popup__form popup__form_type_edit" id="popup-form-edit" name="form-popup">
         <fieldset class="popup__field">
@@ -45,7 +45,7 @@
   </div>
   <div class="popup popup_add_card">
     <div class="popup__container">
-      <button class="popup__close" id="close-button-card" type="button"></button>
+      <button class="popup__close" id="close-button-card" type="button" aria-label="Закрыть окно добавления новой карточки"></button>
       <h2 class="popup__title">Новое место</h2>
       <form class="popup__form popup__form_type_card" id="popup-form-add" name="CardForm-popup">
        <fieldset class="popup__field">
@@ -61,17 +61,17 @@
   <div class="popup popup_type_image">
     <div class="popup__image-content">
       <img src="#" alt="Открытое фото места" class="popup__image-photo">
-      <button class="popup__close" id="close-button-image" type="button"></button>
+      <button class="popup__close" id="close-button-image" type="button" aria-label="Закрыть фотографию"></button>
       <h2 class="popup__image-title"></h2>
     </div>
   </div>
   <template class="elements_template">
     <li class="element">
       <img src="#" alt="Фото места" class="element__image">
-      <button class="element__delete" type="button"></button>
+      <button class="element__delete" type="button" aria-label="Удалить карточку с фотографией"></button>
       <div class="element__group">
         <h2 class="element__text"></h2>
-        <button class="element__like" type="submit"></button>
+        <button class="element__like" type="submit" aria-label="Поставить лайк карточке с фотографией"></button>
       </div>
     </li>
   </template>
