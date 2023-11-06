@@ -74,7 +74,6 @@ function openPopupImage(link, name) {
   popupCaption.textContent = name;
 
   openModal(popupZoom);
-  document.addEventListener("keydown", handleEscClose); 
 }
 
 buttonClosePopupImage.addEventListener("click", function () { 
