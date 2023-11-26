@@ -19,4 +19,4 @@ export function handleOverlayClose(evt) {
   if (evt.target === evt.currentTarget) { 
     closeModal(evt.currentTarget); 
   } 
-} 
+}

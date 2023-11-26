@@ -1,4 +1,4 @@
-.popup__input-error_active {
+.popup__error {
     margin: 5px auto 0 auto;
     padding: 0;
     color: #FF0000;
@@ -10,24 +10,28 @@
     right: 36px;
 }
 
-.popup__input-error_active:first-of-type {
+.popup__error:first-of-type {
     top: 143px;
 }
 
-.popup__input-error_active:last-of-type {
+.popup__error:last-of-type {
     top: 200px;
 }
 
+.popup__error_visible {
+    display: block;
+}
+
 @media all and (max-width: 767px){
-    .popup__input-error_active{
+    .popup__error{
         max-width: 238px;
         right: 22px;
     }
-    .popup__input-error_active:first-of-type {
+    .popup__error:first-of-type {
         top: 148px;
     }
     
-    .popup__input-error_active:last-of-type {
+    .popup__error:last-of-type {
         top: 207px;
     }
 }

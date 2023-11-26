@@ -1,4 +1,4 @@
-.popup__submit-button{
+.popup__button{
     margin: 48px 36px 37px;
     width: 358px;
     border: none;
@@ -12,13 +12,20 @@
     min-height: 50px;
 }
 
-.popup__submit-button:hover {
+.popup__button:hover {
     opacity: .8;
     cursor: pointer;
 }
 
+.popup__button_disabled {
+    pointer-events: none;
+    background-color: #fff;
+    color: #c4c4c4;
+    border: solid 1px #c4c4c4;
+}
+
 @media all and (max-width: 767px){
-    .popup__submit-button{
+    .popup__button{
         max-width: 238px;
         height: 46px;
         font-size: 14px;
