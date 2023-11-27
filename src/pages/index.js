@@ -1,5 +1,5 @@
 import "./index.css";
-import { renderCard, likeCard, deleteCard } from "../components/Card.js";
+import { renderCard, likeCard } from "../components/Card.js";
 import { closeModal, openModal, handleOverlayClose } from "../components/modal.js";
 import { clearValidation, enableValidation } from "../components/validation.js";
 import { getInitialInfo, postNewCard, updateUserAvatar, updateUserProfile,
@@ -33,6 +33,11 @@ const validationConfig = {
   errorClass: "popup__error_visible",
 };
 let userId;
+
+const deleteCard = (evt, cardId) => {
+  openModal(popupConfirm);
+  popupConfirm.dataset.cardId = cardId;
+};
 
 const renderLoading = (isLoading, button) => {
   button.textContent = isLoading ? "Сохранение..." : "Сохранить";
@@ -81,7 +86,6 @@ const handleProfileFormSubmit = async (evt) => {
     .then((updatedProfile) => {
       fillProfileInfo(updatedProfile);
       closeModal(popupProfile);
-      clearValidation(popupProfileForm, validationConfig);
     })
     .catch((err) => {
       console.log(err);
@@ -98,7 +102,6 @@ const handleAvatarFormSubmit = async (evt) => {
     .then((updatedProfile) => {
       fillProfileInfo(updatedProfile);
       closeModal(popupAvatar);
-      clearValidation(popupAvatarForm, validationConfig);
     })
     .catch((err) => {
       console.log(err);
@@ -115,12 +118,8 @@ const handleNewCardFormSubmit = async (evt) => {
   const link = popupCardForm.elements.link.value;
   postNewCard({ name, link })
     .then((newCard) => {
-      renderCard(newCard, userId, placesList, likeCard, deleteCard, openImagePopup, 
-        "start",
-      );
+      renderCard(newCard, userId, placesList, likeCard, deleteCard, openImagePopup, "start");
       closeModal(popupCard);
-      popupCardForm.reset();
-      clearValidation(popupCardForm, validationConfig);
     })
     .catch((err) => {
       console.log(err);

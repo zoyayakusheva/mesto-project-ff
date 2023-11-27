@@ -1,11 +1,10 @@
 import { deleteLike, putLike } from "./api.js";
-import { openModal } from "./modal.js";
 
 const cardTemplate = document.querySelector(".elements_template").content;
 const popupConfirm = document.querySelector(".popup_type_confirm");
 
-const likeCard = async (evt, cardId) => {
-  let currentLikes = evt.target.parentNode.querySelector(".element__like-count");
+const likeCard = (evt, cardId) => {
+  const currentLikes = evt.target.parentNode.querySelector(".element__like-count");
 
   if (evt.target.classList.contains("element__like_active")) {
     deleteLike(cardId)
@@ -26,11 +25,6 @@ const likeCard = async (evt, cardId) => {
         console.log(err);
       });
   }
-};
-
-const deleteCard = (evt, cardId) => {
-  openModal(popupConfirm);
-  popupConfirm.dataset.cardId = cardId;
 };
 
 const createCard = (card, userId, deleteCardFn, likeCardFn, openFullImageFn) => {
@@ -81,4 +75,4 @@ const renderCard = (item, userId, container, likeCard, deleteCard, openFullImage
   }
 };
 
-export { renderCard, likeCard, deleteCard };
+export { renderCard, likeCard};
